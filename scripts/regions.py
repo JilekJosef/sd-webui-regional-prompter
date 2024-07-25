@@ -601,7 +601,7 @@ def save_mask(img, flpath):
         pass
     if VARIANT != 0: # Always save without variance.
         img = img[:-VARIANT,:-VARIANT,:]
-    img = cv2.cvtColor(np.array(image).astype('uint8'), cv2.COLOR_RGB2BGR)
+    img = cv2.cvtColor(np.array(img).astype('uint8'), cv2.COLOR_RGB2BGR)
     cv2.imwrite(flpath, img)
 
 def load_mask(flpath):
